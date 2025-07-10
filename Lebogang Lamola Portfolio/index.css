@@ -7,28 +7,6 @@
 }
 
 :root {
-  --background-color: white;
-  --text-color: black;
-  --link-color: blue;
-  --sector1-bg-img: url("image/AllVine.png");
-  --sector2-bg-img: url("image/Vine.png");
-  --card-bg-img: url("image/Lebogang_Lamola.jpg");
-  --h2-text-deco-color: #70c250;
-  --nav-ul-li-a-color: #050505;
-  --header-color: black;
-  --nav-box-shadow: 0 2px 5px rgba(11, 139, 11, 0.589);
-  --slider-before-bg-color: white;
-  --button-bg-color: #fcfbfb;
-  --button-box-shadow: inset 4px 4px 10px #70c250, inset -4px -4px 10px #75eb7f;
-  --button-hover-box-shadow: inset 2px 2px 5px #bcbcbc,
-    inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
-  --button-focus-box-shadow: inset 2px 2px 5px #bcbcbc,
-    inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
-  --project-color: #f9f9f9;
-  --leaf-bg-img: url("image/leaf.png");
-}
-
-[data-theme="dark"] {
   --background-color: #050505;
   --text-color: white;
   --link-color: lightblue;
@@ -48,6 +26,31 @@
     inset -2px -2px 5px #858181, 2px 2px 5px #bcbcbc, -2px -2px 5px #757474;
   --project-color: #141414b4;
   --leaf-bg-img: url("image/leaf2.png");
+  --sector5-box-shadow: 2px 4px 60px rgba(96, 178, 206, 0.925);
+}
+
+[data-theme="light"] {
+  --background-color: white;
+  --text-color: black;
+  --link-color: blue;
+  --sector1-bg-img: url("image/AllVine.png");
+  --sector2-bg-img: url("image/Vine.png");
+  --card-bg-img: url("image/Lebogang_Lamola.jpg");
+  --h2-text-deco-color: #70c250;
+  --nav-ul-li-a-color: #050505;
+  --header-color: black;
+  --nav-box-shadow: 0 2px 5px rgba(11, 139, 11, 0.589);
+  --slider-before-bg-color: white;
+  --button-bg-color: #fcfbfb;
+  --button-box-shadow: inset 4px 4px 10px #70c250, inset -4px -4px 10px #75eb7f;
+  --button-hover-box-shadow: inset 2px 2px 5px #bcbcbc,
+    inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+  --button-focus-box-shadow: inset 2px 2px 5px #bcbcbc,
+    inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+  --project-color: #f9f9f9;
+  --leaf-bg-img: url("image/leaf.png");
+  --sector5-box-shadow: 2px 4px 60px rgba(11, 139, 11, 0.925);
+  
 }
 
 body {
@@ -242,6 +245,9 @@ header {
   margin-bottom: 20px;
   margin-top: 50px;
   padding: 0 10px;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  padding: 1rem;
 }
 
 .name {
@@ -361,6 +367,7 @@ h2 h3 {
   margin-top: -16rem;
   padding: 20px;
   gap: 225px;
+  backdrop-filter: blur(3px);
 }
 
 .column1 {
@@ -393,6 +400,7 @@ h2 h3 {
   gap: 40px;
   max-width: 1200px;
   width: 100%;
+  backdrop-filter: blur(5px);
 }
 
 .skills-block,
@@ -492,6 +500,7 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 50px;
   padding: 1px;
+  backdrop-filter: blur(5px);
   background-color: blur;
   box-shadow: 0 4px 6px rgba(85, 71, 71, 0.1);
   transition: transform 0.3s ease;
@@ -529,7 +538,7 @@ h1 {
 .Achievements,
 .hobbies {
   position: flex;
-
+  backdrop-filter: blur(1px);
   margin-top: 0;
   text-align: center;
   padding: 10px;
@@ -549,6 +558,8 @@ h1 {
 .event {
   position: relative;
   margin-bottom: 50px;
+  backdrop-filter: 40px;
+  margin-left: 40px;
 }
 
 .leaf {
@@ -570,11 +581,14 @@ h1 {
 
 .sector5 {
   margin-top: -20%;
+  margin-left: 50px;
   padding: 4rem;
+  border-radius: 15px;
+  max-width: 90%;
   background-color: var(--project-color);
 }
 
-/* Slider Styling */
+
 .project-slider {
   position: relative;
   overflow: hidden;
@@ -594,7 +608,7 @@ h1 {
   max-width: 48%;
   text-align: center;
   padding: 6rem;
-  background-color: #fff;
+  background-color: #ffffffea;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -718,8 +732,9 @@ h1 {
   }
 
   .sector5 {
-    padding: 2rem;
-    margin-top: 0;
+    padding: 70px 50px;
+    margin-top: -50%;
+    margin-left: 10px;
   }
 
   .project-card {
@@ -728,8 +743,7 @@ h1 {
   }
 
   .slider-btn {
-    width: 30px;
-    height: 30px;
+    flex-direction: column;
   }
 }
 
@@ -742,6 +756,9 @@ h1 {
     flex-direction: column;
   }
 
+  .slider-btn{
+    display: none;
+  }
   .leaf {
     left: -30px;
     width: 15px;
