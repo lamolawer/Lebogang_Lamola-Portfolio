@@ -581,6 +581,20 @@ h1 {
   margin-bottom: 5px;
 }
 
+‎.toggleBtn1 {
+‎  padding: 10px 20px;
+‎  background-color: #d0ffe1;
+‎  border: none;
+‎  border-radius: 20px;
+‎  cursor: pointer;
+‎  font-weight: bold;
+‎  transition: 0.3s;
+‎}
+‎
+‎.toggleBtn1:hover {
+‎  background-color: #a6f4c5;
+‎}
+
 .sector5 {
   margin-top: -20%;
   margin-left: 50px;
