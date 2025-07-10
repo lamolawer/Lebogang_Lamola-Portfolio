@@ -73,16 +73,3 @@ function downloadPDF() {
   link.click();
 }
 
-function toggleHide() {
-‎    const content = document.querySelector('.more');
-‎    const button = document.getElementById('toggleBtn1');
-‎    
-‎    if (content.style.display === "none") {
-‎      content.style.display = "block";
-‎      button.textContent = "Read Less";
-‎    } else {
-‎      content.style.display = "none";
-‎      button.textContent = "Read More";
-‎    }
-‎  }
-‎
