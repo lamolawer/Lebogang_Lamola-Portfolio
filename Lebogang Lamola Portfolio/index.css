@@ -560,7 +560,7 @@ h1 {
 .event {
   position: relative;
   margin-bottom: 50px;
-  backdrop-filter: 40px;
+  backdrop-filter: blur(5px);
   margin-left: 40px;
 }
 
