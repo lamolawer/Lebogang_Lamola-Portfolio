@@ -349,6 +349,8 @@ h2 h3 {
 
 .text-color {
   color: #0bccee;
+  text-decoration: dotted underline;
+  font-weight: bold;
 }
 
 .card {
