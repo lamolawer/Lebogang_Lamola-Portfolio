@@ -63,6 +63,24 @@ document.addEventListener("DOMContentLoaded", () => {
     currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
     sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
   });
+
+  
+  const toggleBtn = document.querySelectorAll('.toggleBtn');
+  toggleBtn.forEach(button=>{
+    button.addEventListener('click', function(){
+      const targetId = this.getAttribute('data-target');
+      const target = document.getElementById(targetId);
+
+      if(target.classList.contains('hidden')){
+        target.classList.remove('hidden');
+        this.textContent = 'Read Less';
+
+      }else{
+         target.classList.add('hidden');
+        this.textContent = 'Read more';
+      }
+    });
+  });
 });
 
 function downloadPDF() {
