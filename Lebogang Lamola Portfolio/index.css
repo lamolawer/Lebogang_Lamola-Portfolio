@@ -349,7 +349,7 @@ h2 h3 {
 
 .text-color {
   color: #0bccee;
-  text-decoration: dotted underline;
+  text-decoration: wavy underline;
   font-weight: bold;
 }
 
@@ -593,6 +593,8 @@ h1 {
   font-family: inherit;
   margin-left: 40px;
   margin-top: -20px;
+  font-weight:bold;
+  backdrop-filter: blur(2px);
 }
 
 .toggleBtn:hover {
