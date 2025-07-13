@@ -612,7 +612,8 @@ h1 {
   padding: 4rem;
   border-radius: 15px;
   max-width: 90%;
-  background-color: var(--project-color);
+  
+  box-shadow: var(--sector5-box-shadow);
 }
 
 
